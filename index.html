@@ -1,9 +1,8 @@
-const width = window.innerWidth;
-const height = window.innerHeight;
-console.log(width, height)
-
 <html>
 
+  <var>
+    
+  </var>
   <head>
     
     <style>
@@ -28,7 +27,7 @@ console.log(width, height)
 
   <body>
     
-    <b><h1><img src="images/website icon.png"> Voxe1ated <img src="images/website icon.png"></h1></b>
+    <div id="myDIV" onwheel="myFunction()"><b><h1> <img src="images/website icon.png"> Voxe1ated <img src="images/website icon.png"></h1></b>
     
     <h3> Welcome! -- Wilkommen!</h3> 
    
@@ -39,4 +38,11 @@ console.log(width, height)
     
 </body>
 
+<script>
+  function myFunction() {
+  document.getElementById("myDIV").style.fontSize = "35px";
+  
+}
+  
+</script>
 </html>
