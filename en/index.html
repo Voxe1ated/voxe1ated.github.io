@@ -22,8 +22,14 @@
         --psh-cta-text-color: #111827;
         --psh-cta-hover-bg: #f3f4f6;
     }
-
+    .parallax-page {
+        background-image: var(--psh-bg-image);
+        background-position: center 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }    
     .parallax-hero {
+        background: none;  
         box-sizing: border-box;
         font-family: Consolas, Segoe UI, Arial;
         min-height: var(--psh-min-height);
@@ -34,10 +40,10 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        background-image: var(--psh-bg-image);
+        /* background-image: var(--psh-bg-image);
         background-position: center 0;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: cover; */
     }
     .parallax-hero::before {
         content: '';
@@ -110,20 +116,19 @@
   - Place this in your <body> where you want the component to appear.
 ======================================================================
 -->
-<section class="parallax-hero" id="parallax-hero-section">
-    <div class="psh-content">
-        <h1 class="title">Voxe1ated</h1>
-        <p class="subtitle">Who Even Am I?</p>
-        <a href="#" role="button" class="cta">Learn More About Us</a>
-    </div>
-</section>
-
-<!-- This section is just for demonstration to create scroll space -->
-<section class="text-content">
+<div class="parallax-page" id="parallax-page">
+  <section class="parallax-hero" id="parallax-hero-section">
+      <div class="psh-content">
+          <h1 class="title">Voxe1ated</h1>
+          <p class="subtitle">Who Even Am I?</p>
+          <a href="#" role="button" class="cta">Learn More About Us</a>
+      </div>
+  </section>
+  <section class="text-content">
     <p>UPDATE 4 Scroll down to see the true parallax effect in action. Notice how the content in this section scrolls normally, while the background image of the hero above scrolls up at a slower speed.</p>
     <p>This is achieved with a small JavaScript snippet that adjusts the background's vertical position based on your scroll position.</p>
     <p>yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap <br> yap <br> yap </p>
-</section>
+  </section>
 
 <!-- 
 ======================================================================
@@ -133,8 +138,8 @@
 -->
 <script>
 (function() {
-    const parallaxSection = document.getElementById('parallax-hero-section');
-    if (!parallaxSection) return;
+    const parallaxPage = document.getElementById('parallax-page');
+    if (!parallaxPage) return;
 
     // --- Configuration ---
     const parallaxSpeed = 0.5; // Set speed factor. 0.5 means it scrolls at half the speed.
@@ -142,7 +147,7 @@
 
     window.addEventListener('scroll', function() {
         const offset = window.pageYOffset;
-        parallaxSection.style.backgroundPositionY = offset * parallaxSpeed + 'px';
+        parallaxPage.style.backgroundPositionY = offset * parallaxSpeed + 'px';
     });
 })();
 </script>
