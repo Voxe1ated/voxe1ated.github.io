@@ -31,11 +31,10 @@
         font-family: Consolas, Segoe UI, Arial;
         min-height: 75vh;
         padding: var(--psh-padding);
-      
-        width: (88%. 1200px);
+        width: min(88%, 1200px);
         margin: 2rem auto;
-        border-radius: 16px
-      
+        border-radius: 16px;
+        overflow: hidden;
         position: relative;
         display: flex;
         justify-content: center;
@@ -49,7 +48,7 @@
     .parallax-hero::before {
         content: '';
         position: absolute;
-        top: 0; left: 0; right: 0; bottom: 0;
+        inset: 0;
         background-color: var(--psh-overlay-color);
         z-index: 1;
     }
