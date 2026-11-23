@@ -29,12 +29,9 @@
     .parallax-hero {
         box-sizing: border-box;
         font-family: Consolas, Segoe UI, Arial;
-        min-height: 75vh;
+        min-height: var(--psh-min-height);
         padding: var(--psh-padding);
-        width: min(88%, 1200px);
-        margin: 2rem auto;
-        border-radius: 16px;
-        overflow: hidden;
+        width: 100%
         position: relative;
         display: flex;
         justify-content: center;
@@ -93,13 +90,16 @@
     }
 
     /* Extra content section for demonstrating the scroll effect */
-    .scroll-demo-content {
-        height: 100vh; /* Ensures a lot of scroll space */
-        padding: 4rem 1.5rem;
+    .text-content {
+        box-sizing: border-box;
+        width: min(88%, 700px);
+        margin: 2rem auto;
+        padding: 2rem;
         background-color: #fff;
         color: #111827;
+        border-radius: 16px;
     }
-    .scroll-demo-content p {
+    .text-content p {
         max-width: 700px;
         margin: 0 auto 1rem;
         line-height: 1.6;
@@ -121,7 +121,7 @@
 </section>
 
 <!-- This section is just for demonstration to create scroll space -->
-<section class="scroll-demo-content">
+<section class="text-content">
     <p>UPDATE 3 Scroll down to see the true parallax effect in action. Notice how the content in this section scrolls normally, while the background image of the hero above scrolls up at a slower speed.</p>
     <p>This is achieved with a small JavaScript snippet that adjusts the background's vertical position based on your scroll position.</p>
 </section>
