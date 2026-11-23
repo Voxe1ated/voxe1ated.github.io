@@ -12,6 +12,22 @@
         --psh-cta-text-color: #111827;
         --psh-cta-hover-bg: #f3f4f6;
       }
+      .psh-content .cta {
+          display: inline-block;
+          background-color: var(--psh-cta-bg);
+          color: var(--psh-cta-text-color);
+          padding: 0.9rem 2.2rem;
+          border-radius: 8px;
+          border: none;
+          font-size: 1.05rem;
+          font-weight: 600;
+          text-decoration: none;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+      }
+      .psh-content .cta:hover {
+          background-color: var(--psh-cta-hover-bg);
+      }
       
       body { 
         text-align: center;
@@ -40,7 +56,7 @@
     
     <a href="/en/" role="button" class="cta">English</a>
     <a href="/en/" role="button" class="cta">Deutsch</a>
-    <br> <br>
+    <br> updated <br>
     <img src="images/TV Pose 2026.png" alt="there should be a really cool image here..." class="responsive-image"> 
     
 </body>
